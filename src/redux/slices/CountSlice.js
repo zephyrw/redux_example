@@ -12,9 +12,12 @@ const countSlice = createSlice({
         decrementAction: (state, action) => {
             state.value -= action.payload;
         },
+        errorInput: (state, action) => {
+            alert(action.payload);
+        }
     },
 });
 
-export const {incrementAction, decrementAction } = countSlice.actions;
+export const {incrementAction, decrementAction, errorInput } = countSlice.actions;
 
 export const countReducer = countSlice.reducer;
